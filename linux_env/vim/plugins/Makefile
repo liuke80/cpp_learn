@@ -20,8 +20,8 @@ all: vim-asterisk-master.zip
 vim-asterisk-master.zip:
 	wget -O $@ https://github.com/haya14busa/vim-asterisk/archive/master.zip
 
-all: vim-colors-solarizedvim-colors-solarized.zip
-vim-colors-solarizedvim-colors-solarized.zip:
+all: vim-colors-solarized.zip
+vim-colors-solarized.zip:
 	wget -O $@ https://github.com/altercation/vim-colors-solarized/archive/master.zip
 
 all: vim-noctu-master.zip
@@ -135,6 +135,11 @@ emmet-vim.zip:
 #
 # html, xml
 ########################
+
+# syntastic
+all: syntastic.zip
+syntastic.zip:
+	wget -O $@ https://github.com/scrooloose/syntastic/archive/master.zip
 
 # markdown
 all:  vim-markdown.zip
