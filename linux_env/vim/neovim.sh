@@ -32,6 +32,13 @@ function roxma_neovim_install() {
 
 }
 
+# setup 256 color for vim
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
+
 ##
 # This script is used to setup the user's nvim environment, including:
 #
@@ -107,12 +114,7 @@ function roxma_neovim_install() {
 
 	cd - 1>&2 # go back
 
-	# ctags
-	unalias ctags 2>/dev/null
-	alias ctags="$(which ctags | awk '{print $NF}') --c-kinds=+p --c++-kinds=+p"
 
-	alias vim 1>&2
-	alias ctags 1>&2
 } | tee
 
 # export path if neovim installed
@@ -121,7 +123,7 @@ then
     echo export PATH="$(readlink -f $(dirname ${BASH_SOURCE[0]}))/.local_software/neovim/bin":$PATH
     export PATH="$(readlink -f $(dirname ${BASH_SOURCE[0]}))/.local_software/neovim/bin":$PATH
 
-    unalias nvim
+    unalias nvim 2>/dev/null
     alias nvim="$(readlink -f $(dirname ${BASH_SOURCE[0]}))/.local_software/neovim/bin/nvim -u \"$(roxma_nvim_rcfile_name)\" -p"
     echo alias nvim="$(readlink -f $(dirname ${BASH_SOURCE[0]}))/.local_software/neovim/bin/nvim -u \"$(roxma_nvim_rcfile_name)\" -p"
 

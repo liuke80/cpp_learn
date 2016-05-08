@@ -4,13 +4,6 @@
 # 2. update vim plugins
 #
 
-# vim 256 color
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-    export TERM='xterm-256color'
-else
-    export TERM='xterm-color'
-fi
-
 
 {
 	unalias vim 2>/dev/null

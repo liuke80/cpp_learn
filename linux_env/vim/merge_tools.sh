@@ -2,7 +2,7 @@
 
 echo "function roxma_vim_rcfile(){"
 vimrcEncodedContent="$(cat $(find ./ -maxdepth 1 -name vimrc -o -name "*.vimrc" -o -name "*.vim")  $(find ./ -mindepth 2 -name vimrc -o -name "*.vimrc" -o -name "*.vim") | base64)"
-	echo 'local roxVimrcFile=/tmp/rox_vimrc_$(echo "$(pwd)$(whoami)" | base64_encode )'
+	echo 'local roxVimrcFile=/tmp/rox_vimrc_$(echo "$(whoami)" | base64_encode )'
 	echo "echo '$vimrcEncodedContent' | base64_decode > \$roxVimrcFile"
 	echo "echo \"\$roxVimrcFile\""
 echo "}"
