@@ -141,6 +141,10 @@ all: vim-gitgutter.zip
 vim-gitgutter.zip:
 	wget -O $@ https://github.com/airblade/vim-gitgutter/archive/master.zip
 
+all: vim-fugitive.zip
+vim-fugitive.zip:
+	wget -O $@ https://github.com/tpope/vim-fugitive/archive/master.zip
+
 # syntastic
 all: syntastic.zip
 syntastic.zip:
