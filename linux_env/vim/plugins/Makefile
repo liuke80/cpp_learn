@@ -136,6 +136,11 @@ emmet-vim.zip:
 # html, xml
 ########################
 
+# gitgutter
+all: vim-gitgutter.zip
+vim-gitgutter.zip:
+	wget -O $@ https://github.com/airblade/vim-gitgutter/archive/master.zip
+
 # syntastic
 all: syntastic.zip
 syntastic.zip:
