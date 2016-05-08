@@ -26,8 +26,8 @@
 		# 2. add pathogen initialization to the beginning of vimrc file
 		echo "
 			let s:customvimrc_local_software_dir='$(pwd)/.local_software/'
+			let s:customvimrc_vim_dir='$(pwd)/${localVimDir}/'
 
-			set rtp+=$(pwd)/${localVimDir}/
 			set rtp+=$(pwd)/${localVimDir}/vim-pathogen-master/
 			set nocompatible
 			execute pathogen#infect('$(pwd)/${localVimDir}/bundle/{}')

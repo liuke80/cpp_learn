@@ -166,6 +166,13 @@ all: vim-go.zip
 vim-go.zip:
 	wget -O $@ https://github.com/fatih/vim-go/archive/master.zip
 
+# vim-plug
+all: vim-plug.tar.gz
+vim-plug.tar.gz:
+	mkdir -p vim-plug/autoload
+	wget -O vim-plug/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	tar  -zcf $@  vim-plug
+	rm -rf vim-plug
 
 # # https://github.com/tpope/vim-dispatch#readme
 # all: vim-dispatch.zip
