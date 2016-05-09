@@ -1,6 +1,9 @@
 
 let g:go_auto_type_info=1
 
+" disable go fmt on siave
+let g:go_fmt_autosave = 0
+
 " turn highlighting on
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
