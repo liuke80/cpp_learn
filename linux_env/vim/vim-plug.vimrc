@@ -7,6 +7,7 @@ call plug#begin(s:customvimrc_vim_dir . '/plugged/')
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'simeji/winresizer'
 
 call plug#end()
 
