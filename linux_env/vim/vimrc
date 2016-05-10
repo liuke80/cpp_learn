@@ -101,6 +101,10 @@ nnoremap ?  ?\c\v
 " clean last pattern to avoid highlighting
 " :help last-pattern
 nnoremap <ESC><ESC> :let @/ = ""<CR>
+" nvim exit terminal mode
+if has('nvim')  
+    tmap <ESC><ESC> <C-\><c-n>
+endif
 
 " enable incremental search 
 set incsearch
